@@ -1007,7 +1007,7 @@ form button {
         position: absolute;
         top: 2rem;
         right: 6vw;
-        background: #fff;
+        z-index: 999;
     }
 
     #close {
