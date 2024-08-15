@@ -51,11 +51,13 @@ document.addEventListener('DOMContentLoaded', function() {
     dots.forEach((dot, index) => {
         dot.addEventListener('click', () => {
             showSlide(index);
-            stopSlideShow(); // Stop the automatic slideshow when a dot is clicked
-            startSlideShow(); // Restart the slideshow after manual navigation
+            stopSlideShow(); 
+            startSlideShow();
         });
     });
 
     showSlide(currentIndex);
     startSlideShow();
 });
+
+

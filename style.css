@@ -89,6 +89,7 @@ body{
     display: flex;
     align-items: center;
     gap: 30px;
+    z-index: 999;
     margin: 0;
    
 }
@@ -101,6 +102,7 @@ body{
     text-decoration: none;
     color: #000;
     font-size: 1rem;
+    cursor: pointer;
 }
 
 
@@ -538,7 +540,7 @@ form button {
 .slides {
     display: flex;
     transition: transform 1s ease-in-out;
-    width: 300%;
+    width: 700%;
 }
 
 .slide {
@@ -557,8 +559,8 @@ form button {
 }
 
 @keyframes fadeSlide {
-    0% { opacity: 0; transform: scale(1.1); }
-    100% { opacity: 1; transform: scale(1); }
+    0% { transform: scale(1.1); }
+    100% {transform: scale(1); }
 }
 
 /* Text Overlay */
@@ -580,12 +582,12 @@ form button {
 }
 
 @keyframes slideIn {
-    0% { opacity: 0; transform: translateY(100px); }
-    100% { opacity: 1; transform: translateY(0); }
+    0% {transform: translateY(100px); }
+    100% { transform: translateY(0); }
 }
 @keyframes slideOut {
-    0% { opacity: 0; transform: translateY(-100px); }
-    100% { opacity: 1; transform: translateY(0); }
+    0% { transform: translateY(-100px); }
+    100% { transform: translateY(0); }
 }
 
 .text-content p {
@@ -720,6 +722,7 @@ form button {
    gap: 2rem;
    justify-content: center;
    overflow-y: auto;
+   padding: 2rem;
 }
 
 
@@ -733,6 +736,10 @@ form button {
     gap: 1rem;
     flex-wrap: wrap;
     flex-direction: column;
+}
+
+.gallery-img h2 {
+    font-size: 1rem;
 }
 
 .gallery-img img {
@@ -753,6 +760,7 @@ form button {
 .img-content h3 {
     font-size: 2rem;
 }
+
 
 .img-content a {
     color: white;
@@ -860,6 +868,11 @@ form button {
         align-items: center;
     }
 
+    .contact {
+        height: auto;
+        margin-bottom: 2rem;
+    }
+
     .banner {
         top: 250vh;
     }
@@ -911,7 +924,6 @@ form button {
     }
     .contact {
         width: 100%;
-        margin-bottom: 5rem;
     }
     .form {
         width: 100%;
@@ -1009,7 +1021,7 @@ form button {
         position: absolute;
         top: 5rem;
         right: 0;
-        background: rgb(242, 241, 248);
+        background: #f2f1f8;
         z-index: 99;
         align-items: start;
         padding: 2rem 3rem;
@@ -1022,6 +1034,7 @@ form button {
 
     .menu li a {
         color: #000;
+        cursor: pointer;
     }
 
     .about_right {
@@ -1031,10 +1044,6 @@ form button {
 
     .service {
         width: 100%;
-    }
-
-    .contact {
-        margin-bottom: 12rem;
     }
 
     .gallery-img {
@@ -1128,10 +1137,6 @@ form button {
         line-height: 1.8rem;
     }
 
-    .contact {
-        margin-bottom: 28rem;
-    }
-
     .form {
         width: 100%;
     }
@@ -1215,4 +1220,42 @@ form button {
         text-align: center;
         height: fit-content;
     }
+
+    .services-img {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .title {
+        padding: 1rem;
+    }
+
+    .about {
+        margin: 0;padding: 0;
+        width: 100%;
+    }
+
+    .about_cards {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        gap: 2rem;
+    }
+
+    .about_card {
+        gap: 2rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    .about_center {
+        margin-top: 1rem;
+        margin-bottom: 10rem;
+    }
+    
+    .about_right {
+        margin-bottom: 2rem;
+    }
+
 }
